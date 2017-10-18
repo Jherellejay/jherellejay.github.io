@@ -1,0 +1,28 @@
+body div#contact {
+	section .container {
+		div#confirm, div#error {
+			display: none;
+			margin-bottom: 50px;
+		}
+	}
+	label {
+		display: block;
+		margin-top: 1em;
+	}
+	input[type="text"], input[type="email"], textarea {
+		width: 50%;
+	}
+	input[type="text"], input[type="email"] {
+		height: 35px;
+	}
+	input[type="submit"] {
+		margin-top: 1em;
+	}
+}
+@media screen and (max-width:767px) {
+	body div#contact {
+		input[type="text"], input[type="email"], textarea {
+			width: 75%;
+		}
+	}
+}

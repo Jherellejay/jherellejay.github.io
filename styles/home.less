@@ -1,0 +1,50 @@
+body {
+	div#about {
+		section {
+			img {
+				max-height: 300px;
+				margin: 0 auto;
+				display: block;
+				max-width: 100%;
+				&.instagram {
+					max-height: 230px;
+					padding: 10px 0;
+				}
+			}
+			p {
+				text-align: justify;
+				max-width: 600px;
+				line-height: 25px;
+				word-spacing: 10px;
+				letter-spacing: 1px;
+			}
+		}
+		#instafeed {
+			height: 343px;
+			//this is for the fixed header scroll height calculations
+		}
+	}
+}
+@media screen and (max-width:767px) {
+	body {
+		div#about {
+			section {
+				.grid.half {
+					float: none;
+					width: 86%;
+					margin: 0 auto;
+					p {
+						max-width: 100%
+					}
+				}
+				.grid.quarter {
+					width: 46%;
+				}
+			}
+			#instafeed {
+				height: auto;
+				//this is for the fixed header scroll height calculations
+			}
+		}
+	}
+}

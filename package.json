@@ -1,0 +1,26 @@
+{
+	"name": "jherellejay",
+	"version": "1.0.0",
+	"description": "A website",
+	"repository": "",
+	"engines": {
+		"npm": ">=2.15.9",
+		"node": ">=4.6.0"
+	},
+	"main": "index.js",
+	"scripts": {
+		"start": "npm install && gulp"
+	},
+	"author": "Daniel Cooper",
+	"devDependencies": {
+		"child_process": "^1.0.2",
+		"gulp": "^3.9.1",
+		"gulp-clean-css": "^3.9.0",
+		"gulp-concat": "^2.6.1",
+		"gulp-eslint": "^4.0.0",
+		"gulp-htmlmin": "^3.0.0",
+		"gulp-less": "^3.3.2",
+		"gulp-uglify": "^3.0.0",
+		"gulp-util": "^3.0.8"
+	}
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="mobile-web-app-capable" content="yes">
+	<title>{% if page.title %} {{ page.title }} | Jherelle Jay - Intricate &amp; Dotwork Tattoo Designs  {% else %}Jherelle Jay - Intricate &amp; Dotwork Tattoo Designs{% endif %}</title>
+	<meta name="description" content="Jherelle Jay is a Tattoo artist, that loves creating black, intricate, & dotwork designs. Check them out here!" />
+	<link rel="stylesheet" href="/static/styles.css">
+	<link rel="icon" href="/static/favicon.ico" type="image/x-icon" />
+	<link rel="apple-touch-icon" sizes="180x180" href="/static/apple-touch-icon.png">
+	<link rel="icon" type="image/png" href="/static/favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="/static/favicon-16x16.png" sizes="16x16">
+	<link rel="manifest" href="/static/manifest.json">
+	<link rel="mask-icon" href="/static/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+	<header class="site-head">
+		<div class="container">
+			<a href="/">
+				<div class="logo" alt="Jherelle Jay Designs"></div>
+			</a>
+			<h1 class="center underline tagline">Tattoo Artist | London, England</h1>
+			<nav>
+				<a class="mobile-menu" href="#"><i class="fa fa-bars"></i></a>
+				<ul>
+					<li><a href="/contact">Contact</a></li>
+					<li>
+						<a target="_blank" href="https://www.etsy.com/uk/shop/JherelleJayDesigns"><i class="fa fa-etsy"></i></a>
+						<a target="_blank" href="https://www.facebook.com/jherellejaytattoo/"><i class="fa fa-facebook-official"></i></a>
+						<a target="_blank" href="https://www.instagram.com/jherellejaytattoo/"><i class="fa fa-instagram"></i></a>
+						<a target="_blank" href="https://uk.pinterest.com/jherellejay/"><i class="fa fa-pinterest-p"></i></a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	{{ content }}
+	<footer class="site-foot">
+		<div class="container">
+			<div class="logo" src="/static/logo.png" alt="Jherelle Jay Designs"></div>
+			<p id="copyright" class="center">&copy; Copyright 2016</p>
+		</div>
+	</footer>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-lazyload/7.2.0/lazyload.min.js"></script>
+	<script src="/static/instafeed.min.js"></script>
+	<script src="/static/script.js"></script>
+	<script>
+		(function(i, s, o, g, r, a, m) {
+			i['GoogleAnalyticsObject'] = r;
+			i[r] = i[r] || function() {
+				(i[r].q = i[r].q || []).push(arguments)
+			}, i[r].l = 1 * new Date();
+			a = s.createElement(o),
+				m = s.getElementsByTagName(o)[0];
+			a.async = 1;
+			a.src = g;
+			m.parentNode.insertBefore(a, m)
+		})(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+		ga('create', 'UA-82874392-1', 'auto');
+		ga('send', 'pageview');
+	</script>
+</body>
+
+</html>

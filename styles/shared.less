@@ -1,0 +1,125 @@
+body {
+	margin: 0;
+	font-family: 'Raleway', serif;
+	color: @fontcolour;
+	line-height: 1.75em;
+
+	div {
+		&.grid {
+			float: left;
+			padding: 0 2%;
+		}
+		&.center {
+			margin: 0 auto;
+		}
+		&.quarter {
+			width: 21%;
+		}
+		&.third {
+			width: 29%;
+		}
+		&.half {
+			width: 46%;
+		}
+		&.full {
+			width: 96%;
+		}
+		&.left {
+			float: left;
+		}
+		&.right {
+			float: right;
+		}
+		&.clear {
+			clear: both;
+		}
+	}
+	h1, h2, h3, h4, h5 {
+		letter-spacing: 2px;
+		margin-bottom: 5px;
+		margin-top: 2em;
+		text-transform: uppercase;
+		font-family: 'Roboto Slab', serif;
+	}
+	h1 {
+		font-size: 25px;
+	}
+	h2 {
+		font-size: 20px;
+	}
+	h3, h4 {
+		font-size: 18px;
+	}
+	h4, h5 {
+		text-decoration: none;
+	}
+	h5 {
+		font-weight: normal;
+	}
+	a {
+		color: @fontcolour;
+		transition: color 0.3s ease;
+	}
+	a:hover {
+		color: #111;
+	}
+	.center {
+		text-align: center;
+	}
+	.underline {
+		text-decoration: underline;
+	}
+	.sep {
+		width: 30px;
+		background: #333;
+		height: 5px;
+	}
+	input[type="text"], input[type="email"], textarea {
+		font-family: inherit;
+		border: 1px solid @border;
+		border-radius: 5px;
+		padding: 5px;
+		margin-top: 10px;
+	}
+	.button {
+		border: 1px solid @border;
+		border-radius: 5px;
+		padding: 10px 40px;
+		text-align: center;
+		cursor: pointer;
+		width: 200px;
+		margin: 0 auto;
+
+		&:hover {
+			background: @off;
+		}
+	}
+	#error-msg {
+		color: red;
+	}
+	header, footer, section {
+		.container {
+			width: 80%;
+			margin: 0 auto;
+
+			&:after {
+				content: '';
+				display: block;
+				clear: both;
+			}
+		}
+	}
+	section.block {
+		padding: 25px 0;
+		border-bottom: 1px solid @off;
+	}
+}
+@media screen and (max-width:1024px) {
+	body {
+		header, section, footer {
+			.container {
+				width: 95%;
+			}
+		}
+	}
+}
