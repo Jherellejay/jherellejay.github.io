@@ -1,6 +1,5 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto+Slab);
+@import url(https://fonts.googleapis.com/css?family=Merriweather);
 @import url(https://fonts.googleapis.com/css?family=Raleway);
-@import url(https://fonts.googleapis.com/css?family=Slabo+27px);
 body {
   margin: 0;
   font-family: 'Raleway', serif;
@@ -44,7 +43,7 @@ body h5 {
   margin-bottom: 5px;
   margin-top: 2em;
   text-transform: uppercase;
-  font-family: 'Roboto Slab', serif;
+  font-family: 'Merriweather', serif;
 }
 body h1 {
   font-size: 25px;
@@ -138,6 +137,17 @@ body footer.site-foot div.logo {
   margin: 0 auto;
   display: block;
 }
+body header.site-head a.logo,
+body footer.site-foot a.logo {
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  width: 100%;
+  display: block;
+  font-size: 50pt;
+  line-height: 50pt;
+  font-family: "Merriweather", serif;
+}
 body header.site-head {
   margin-top: 25px;
   border-bottom: 1px solid #EEE;
@@ -158,11 +168,18 @@ body header.site-head.scroll div.container div.logo {
   padding-bottom: 7%;
   float: left;
 }
+body header.site-head.scroll div.container a.logo {
+  float: left;
+  width: auto;
+  font-size: 20pt;
+  line-height: 20pt;
+  margin: 20px 0;
+}
 body header.site-head.scroll div.container h1 {
   display: none;
 }
 body header.site-head.scroll div.container nav {
-  width: 40%;
+  width: 60%;
   margin: 20px 1%;
   float: right;
 }
@@ -205,9 +222,10 @@ body header.site-head nav a.mobile-menu {
 body footer.site-foot {
   min-height: 80px;
 }
-body footer.site-foot div.logo {
-  width: 40%;
-  padding: 0 0 10% 0;
+body footer.site-foot a.logo {
+  font-size: 15pt;
+  line-height: 15pt;
+  margin-top: 1em;
 }
 @media screen and (max-width: 1110px) {
   body header div.container {
@@ -219,6 +237,11 @@ body footer.site-foot div.logo {
   body section .container,
   body footer .container {
     width: 95%;
+  }
+  body header .container a.logo,
+  body section .container a.logo,
+  body footer .container a.logo {
+    margin: 15px 0;
   }
   body header {
     margin-top: 25px;
@@ -232,6 +255,9 @@ body footer.site-foot div.logo {
     width: 30%;
     float: none;
     padding-bottom: 7%;
+  }
+  body header.site-head.scroll div.container a.logo {
+    margin-left: 1em;
   }
   body header.site-head.scroll div.container nav,
   body header.site-head.scroll div.container img.logo {
@@ -266,11 +292,20 @@ body footer.site-foot div.logo {
     width: 50%;
     padding-bottom: 13%;
   }
+  body header.site-head.scroll div.container a.logo {
+    width: 100%;
+    font-size: 20pt;
+    line-height: 20pt;
+  }
 }
 @media screen and (max-width: 400px) {
   body header.site-head.scroll div.container div.logo {
     margin-top: 1%;
     padding-bottom: 15%;
+  }
+  body header.site-head.scroll div.container a.logo {
+    font-size: 15pt;
+    line-height: 15pt;
   }
 }
 body div#about section img {

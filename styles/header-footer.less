@@ -8,6 +8,16 @@ body {
 			margin: 0 auto;
 			display: block;
 		}
+		a.logo {
+			text-transform: uppercase;
+			text-decoration: none;
+			text-align: center;
+			width: 100%;
+			display: block;
+			font-size: 50pt;
+			line-height: 50pt;
+			font-family: "Merriweather", serif;
+		}
 	}
 	header.site-head {
 		margin-top: 25px;
@@ -30,11 +40,18 @@ body {
 					padding-bottom: 7%;
 					float:left;
 				}
+				a.logo {
+					float:left;
+					width: auto;
+					font-size: 20pt;
+					line-height: 20pt;
+					margin: 20px 0;
+				}
 				h1 {
 					display: none;
 				}
 				nav {
-					width: 40%;
+					width: 60%;
 					margin: 20px 1%;
 					float: right;
 
@@ -86,9 +103,10 @@ body {
 		min-height: 80px;
 		//border-top: 1px solid @off;
 
-		div.logo {
-			width:40%;
-			padding:0 0 10% 0;
+		a.logo {
+			font-size: 15pt;
+			line-height: 15pt;
+			margin-top: 1em;
 		}
 	}
 }
@@ -102,6 +120,9 @@ body {
 		header, section, footer {
 			.container {
 				width: 95%;
+				a.logo {
+					margin: 15px 0;
+				}
 			}
 		}
 		header {
@@ -123,6 +144,9 @@ body {
 					width: 30%;
 					float: none;
 					padding-bottom: 7%;
+				}
+				a.logo {
+					margin-left: 1em;
 				}
 				nav, img.logo {
 					float: none;
@@ -156,14 +180,27 @@ body {
 	}
 }
 @media screen and (max-width:500px) {
-	body header.site-head.scroll div.container div.logo {
-		width: 50%;
-		padding-bottom: 13%;
+	body header.site-head.scroll div.container {
+		div.logo {
+			width: 50%;
+			padding-bottom: 13%;
+		}
+		a.logo {
+			width: 100%;
+			font-size: 20pt;
+			line-height: 20pt;
+		}
 	}
 }
 @media screen and (max-width:400px) {
-	body header.site-head.scroll div.container div.logo {
-		margin-top: 1%;
-		padding-bottom: 15%;
+	body header.site-head.scroll div.container {
+		div.logo {
+			margin-top: 1%;
+			padding-bottom: 15%;
+		}
+		a.logo {
+			font-size: 15pt;
+			line-height: 15pt;
+		}
 	}
 }
