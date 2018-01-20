@@ -10,10 +10,25 @@ layout: default
 			<div id="error" class="full">
 				<p class="center">Ooops. Something went wrong there. Try getting in touch with Jherelle via Instagram</p>
 			</div>
-			<form method="POST" action="https://formspree.io/website@jherellejay.co.uk">
+			<form action="https://getsimpleform.com/messages?form_api_token=59962a04abfede3414ef9d17fa4049b7"			
+				method="post"
+				role="form"
+				enctype="multipart/form-data">
+					
+				<!-- the redirect_to is optional, the form will redirect to the referrer on submission -->
+				<input type='hidden' name='redirect_to' value='https://jherellejay.co.uk/contact?sent=true' />
+				
 				<input id="name" name="name" type="text" placeholder="Name" />
 				<input id="email" name="email" type="email" placeholder="Email" />
+				<select id="enquiry-type" name="enquiry-type" onchange="enquirySelect()">
+					<option value="0">General Enquiry</option>
+					<option value="1">Tattoo Booking</option>
+				</select>
 				<textarea id="msg" name="msg" rows="5" placeholder="Message"></textarea>
+				<input hidden type="text" name="size" id="size" class="tat-enq" placeholder="Size"/>
+				<input hidden type="text" name="placement" id="placement" class="tat-enq" placeholder="Placement"/><br>
+				<label class="hidden tat-enq" for="ref-image">Reference Images:</label>
+				<input hidden type="file" name="ref-images" id="ref-images" class="tat-enq" multiple />
 				<input name="noc3po" type="hidden" />
 				<p id="error-msg" class="center error"></p>
 				<input type="submit" id="submit" class="button" value="Send" />

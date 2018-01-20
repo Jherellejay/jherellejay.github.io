@@ -23,8 +23,8 @@ $(document).ready(function() {
 		feed.run();
 	}
 
-	// checkParameters();
-	// $('#submit').click(submitForm);
+	checkParameters();
+	$('#submit').click(submitForm);
 	setHeaderStyle();
 	$('a.mobile-menu').click(mobileMenu);
 
@@ -64,49 +64,66 @@ function getDocumentHeight() {
 		html.clientHeight, html.scrollHeight, html.offsetHeight);
 }
 
-// function checkParameters() {
-// 	var parameters = window.location.search.substring(1);
-// 	if (parameters.length) {
-// 		values = parameters.split('=');
+function enquirySelect() {
+	if ($('#enquiry-type').val() === '1') {
+		$('.tat-enq').slideDown();
+	} else {
+		$('.tat-enq').slideUp();
+	}
+}
 
-// 		if (values[0] === 'sent' && values[1] === 'true') {
-// 			$('#confirm').show();
-// 			$('form').hide();
-// 		} else {
-// 			$('#error').show();
-// 		}
-// 	}
-// }
+function checkParameters() {
+	var parameters = window.location.search.substring(1);
+	if (parameters.length) {
+		values = parameters.split('=');
 
-// function submitForm(e) {
-// 	var name = $('input[name="name"]').val(),
-// 		email = $('input[name="email"]').val(),
-// 		msg = $('input[name="msg"]').val();
+		if (values[0] === 'sent' && values[1] === 'true') {
+			$('#confirm').show();
+			$('form').hide();
+		}
+	}
+}
 
-// 	if (name === '') {
-// 		$('#error-msg').html('Please enter your name.');
-// 		$('#error-msg').show();
-// 		return;
-// 	} else if (msg === '') {
-// 		$('#error-msg').html('Please enter a message.');
-// 		$('#error-msg').show();
-// 		return;
-// 	} else if (email === '') {
-// 		$('#error-msg').html('Please enter your email address.');
-// 		$('#error-msg').show();
-// 		return;
-// 	} else if (!validateEmail(email)) {
-// 		$('#error-msg').html('Please enter a valid email address.');
-// 		$('#error-msg').show();
-// 		return;
-// 	} else {
-// 		$('#error-msg').html('');
-// 		return true;
-// 	}
-// 	return;
-// }
+function submitForm(e) {
+	var name = $('input[name="name"]').val(),
+		email = $('input[name="email"]').val(),
+		enquiry = $('select').val(),
+		msg = $('input[name="msg"]').val(),
+		size = $('input[name="size"]').val(),
+		placement = $('input[name="placement"]').val();
 
-// function validateEmail(email) {
-// 	var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-// 	return re.test(email);
-// }
+	if (name === '') {
+		$('#error-msg').html('Please enter your name.');
+		$('#error-msg').show();
+		return false;
+	} else if (msg === '') {
+		$('#error-msg').html('Please enter a message.');
+		$('#error-msg').show();
+		return false;
+	} else if (email === '') {
+		$('#error-msg').html('Please enter your email address.');
+		$('#error-msg').show();
+		return false;
+	} else if (enquiry === "1" && size === '') {
+		$('#error-msg').html('Please enter the size of your tattoo.');
+		$('#error-msg').show();
+		return false;
+	} else if (enquiry === "1" && placement === '') {
+		$('#error-msg').html('Please enter the placement of your tattoo.');
+		$('#error-msg').show();
+		return false;
+	} else if (!validateEmail(email)) {
+		$('#error-msg').html('Please enter a valid email address.');
+		$('#error-msg').show();
+		return false;
+	} else {
+		$('#error-msg').html('');
+		return true;
+	}
+	return false;
+}
+
+function validateEmail(email) {
+	var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+	return re.test(email);
+}

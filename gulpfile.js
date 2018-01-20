@@ -18,7 +18,7 @@ function errorLogHandler(msg){
 gulp.task('less', function () {
     gulp.src('./styles/styles.less')
     .pipe(less({
-        compress: false
+        compress: true
     })).on('error', errorLogHandler)
     .pipe(gulp.dest('./static'));
 });
@@ -37,11 +37,11 @@ gulp.task('compressjs', ['lint'], function() {
     .pipe(gulp.dest('static'));
 });
 
-gulp.task('compresscss', ['less'], function() {
-  return gulp.src('static/*.css')
-    .pipe(cleanCSS({compatibility: 'ie8'}))
-    .pipe(gulp.dest('static'));
-});
+// gulp.task('compresscss', ['less'], function() {
+//   return gulp.src('static/*.css')
+//     .pipe(cleanCSS({compatibility: 'ie8'}))
+//     .pipe(gulp.dest('static'));
+// });
 
 gulp.task('compresshtml', function() {
   return gulp.src('src/index.html')
@@ -80,7 +80,7 @@ gulp.task(
     [
         'less',
         'lint',
-        'compresscss',
+        // 'compresscss',
         'compressjs',
         // 'compresshtml',
         // 'updateTheme',

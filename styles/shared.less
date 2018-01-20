@@ -74,12 +74,19 @@ body {
 		background: #333;
 		height: 5px;
 	}
-	input[type="text"], input[type="email"], textarea {
+	.hidden {
+		display: none;
+	}
+	input[type="text"], input[type="email"], textarea, select{
 		font-family: inherit;
 		border: 1px solid @border;
 		border-radius: 5px;
 		padding: 5px;
-		margin-top: 10px;
+		-ms-box-sizing:content-box;
+		-moz-box-sizing:content-box;
+		-webkit-box-sizing:content-box; 
+		box-sizing:content-box;
+		margin: 5px auto;
 	}
 	.button {
 		border: 1px solid @border;
