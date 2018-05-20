@@ -10,13 +10,10 @@ layout: default
 			<div id="error" class="full">
 				<p class="center">Ooops. Something went wrong there. Try getting in touch with Jherelle via Instagram</p>
 			</div>
-			<form action="https://getsimpleform.com/messages?form_api_token=59962a04abfede3414ef9d17fa4049b7"			
+			<form action="https://jjmailer.herokuapp.com/contact-form"
 				method="post"
 				role="form"
 				enctype="multipart/form-data">
-					
-				<!-- the redirect_to is optional, the form will redirect to the referrer on submission -->
-				<input type='hidden' name='redirect_to' value='https://jherellejay.co.uk/contact?sent=true' />
 				
 				<input id="name" name="name" type="text" placeholder="Name" />
 				<input id="email" name="email" type="email" placeholder="Email" />
