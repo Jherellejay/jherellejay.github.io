@@ -88,7 +88,7 @@ function submitForm(e) {
 	var name = $('input[name="name"]').val(),
 		email = $('input[name="email"]').val(),
 		enquiry = $('select').val(),
-		msg = $('input[name="msg"]').val(),
+		msg = $('textarea[name="msg"]').val(),
 		size = $('input[name="size"]').val(),
 		placement = $('input[name="placement"]').val();
 
